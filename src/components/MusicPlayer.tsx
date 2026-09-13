@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX, Music } from "lucide-react";
+import { VolumeX, Music } from "lucide-react";
 
 declare global {
   interface Window {
