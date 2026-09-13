@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.9, ease }}
           className="mb-2 flex flex-col items-center"
         >
-          <KrishnaIcon size={72} className="h-16 w-16" />
+          <KrishnaIcon size={96} className="h-24 w-24 sm:h-28 sm:w-28" />
         </motion.div>
 
         <motion.p
@@ -61,11 +61,8 @@ export default function Hero() {
           <p className="text-[13px] sm:text-[14px] uppercase tracking-[0.42em] font-medium text-[#9a6b1f]">
             {wedding.occasionEnglish}
           </p>
-          <h1 className="font-script mt-1 text-[19vw] leading-[1.05] text-[#7b1e1e] sm:text-8xl">
+          <h1 className="font-script mt-1 text-[20vw] leading-[1.05] text-[#7b1e1e] sm:text-8xl">
             Wedding
-            <span className="font-display block text-[7.5vw] uppercase tracking-[0.3em] text-[#9a6b1f] sm:text-3xl">
-              Muhurtham
-            </span>
           </h1>
         </motion.div>
 
@@ -116,7 +113,7 @@ export default function Hero() {
               {wedding.dateLabel}
             </p>
             <p className="text-[15px] sm:text-[16px] font-semibold tracking-[0.08em] text-[#8c2323]">
-              {wedding.muhurthamTimeLabel}
+              {wedding.eventTimingLabel}
             </p>
           </div>
 

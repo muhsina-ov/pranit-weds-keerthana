@@ -8,6 +8,9 @@ declare global {
   }
 }
 
+// High-fidelity ~4-minute full-length Carnatic Violin Fusion of Seetha Kalyana Vaibhogame
+const WEDDING_MUSIC_VIDEO_ID = "Wxt1w3teqfA";
+
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -28,11 +31,11 @@ export default function MusicPlayer() {
         playerRef.current = new window.YT.Player("youtube-audio-player", {
           height: "1",
           width: "1",
-          videoId: "VatyhN0l4Os",
+          videoId: WEDDING_MUSIC_VIDEO_ID,
           playerVars: {
-            autoplay: 0,
+            autoplay: 1,
             loop: 1,
-            playlist: "VatyhN0l4Os",
+            playlist: WEDDING_MUSIC_VIDEO_ID,
             controls: 0,
             showinfo: 0,
             rel: 0,
@@ -40,8 +43,15 @@ export default function MusicPlayer() {
             origin: window.location.origin,
           },
           events: {
-            onReady: () => {
+            onReady: (event: any) => {
               setIsReady(true);
+              try {
+                // Attempt autoplay on ready
+                event.target.playVideo();
+                setIsPlaying(true);
+              } catch {
+                // Browser might require user interaction first
+              }
             },
             onStateChange: (event: any) => {
               // 1 = PLAYING, 2 = PAUSED, 0 = ENDED
@@ -50,7 +60,7 @@ export default function MusicPlayer() {
               } else if (event.data === 2) {
                 setIsPlaying(false);
               } else if (event.data === 0) {
-                // Loop
+                // Loop video
                 playerRef.current?.seekTo(0);
                 playerRef.current?.playVideo();
                 setIsPlaying(true);
@@ -67,26 +77,37 @@ export default function MusicPlayer() {
       window.onYouTubeIframeAPIReady = initPlayer;
     }
 
-    // Auto-play on first user interaction with the page
+    // Auto-play / resume on first user interaction with the page
     const handleFirstInteraction = () => {
       if (playerRef.current && typeof playerRef.current.playVideo === "function") {
         try {
           playerRef.current.playVideo();
           setIsPlaying(true);
         } catch {
-          // browser may block until explicit button click
+          // Browser gesture handling fallback
         }
       }
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
+      removeListeners();
     };
 
-    window.addEventListener("click", handleFirstInteraction, { once: true });
-    window.addEventListener("touchstart", handleFirstInteraction, { once: true });
-
-    return () => {
+    const removeListeners = () => {
       window.removeEventListener("click", handleFirstInteraction);
       window.removeEventListener("touchstart", handleFirstInteraction);
+      window.removeEventListener("pointerdown", handleFirstInteraction);
+      window.removeEventListener("scroll", handleFirstInteraction);
+      window.removeEventListener("wheel", handleFirstInteraction);
+      window.removeEventListener("keydown", handleFirstInteraction);
+    };
+
+    window.addEventListener("click", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("touchstart", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("pointerdown", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("scroll", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("wheel", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("keydown", handleFirstInteraction, { once: true, passive: true });
+
+    return () => {
+      removeListeners();
     };
   }, []);
 
@@ -146,11 +167,14 @@ export default function MusicPlayer() {
               {isPlaying ? "Music On" : "Play Music"}
             </span>
             <span className="text-[9px] tracking-wider text-[#d9b36a]/80">
-              Sita Kalyanam
+              Seetha Kalyanam
             </span>
           </div>
 
-          <Music className={`h-3.5 w-3.5 text-[#d9b36a] ${isPlaying ? "animate-spin" : ""}`} style={{ animationDuration: "6s" }} />
+          <Music
+            className={`h-3.5 w-3.5 text-[#d9b36a] ${isPlaying ? "animate-spin" : ""}`}
+            style={{ animationDuration: "6s" }}
+          />
         </button>
       </div>
     </>

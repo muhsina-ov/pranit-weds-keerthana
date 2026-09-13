@@ -45,21 +45,8 @@ export default function Invitation() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.2}>
-          <div className="card-frame mt-9 rounded-2xl px-6 py-8">
-            <p className="font-script text-4xl sm:text-5xl leading-snug text-[#7b1e1e]">
-              {wedding.brideFirst}{" "}
-              <span className="font-display text-xl sm:text-2xl text-[#b98a2f]">weds</span>{" "}
-              {wedding.groomFirst}
-            </p>
-            <div className="hairline-gold mx-auto my-4 w-32" />
-            <p className="font-display text-xs sm:text-sm uppercase tracking-[0.32em] font-semibold text-[#9a6b1f]">
-              {wedding.weekdayLabel} · {wedding.dateLabel}
-            </p>
-            <p className="mt-2 text-[14px] font-medium tracking-[0.08em] text-[#8c2323]">
-              {wedding.muhurthamTimeLabel}
-            </p>
-          </div>
+        <Reveal delay={0.2} className="mt-8 flex justify-center">
+          <div className="hairline-gold w-36 opacity-80" />
         </Reveal>
       </div>
     </section>

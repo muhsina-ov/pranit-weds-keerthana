@@ -21,7 +21,8 @@ export const wedding = {
   groom: "Pranit Hemant",
   brideFirst: "Keerthanaa",
   groomFirst: "Pranit",
-  hashtag: "#PranitWedsKeerthana",
+  hashtag: "#PranitWedsKeerthanaa",
+  secondaryHashtag: "#Prana",
   blessing: "॥ Jai Shri Krishna ॥",
   occasionEnglish: "Auspicious Beginning",
   occasionTelugu: "Auspicious Beginning",
@@ -30,6 +31,7 @@ export const wedding = {
   weekdayLabel: "Sunday",
   dateLabel: "November 15th, 2026",
   muhurthamTimeLabel: "Muhurtham at 11:48 AM",
+  eventTimingLabel: "9:00 AM – 2:00 PM",
   muhurthamISO: "2026-11-15T11:48:00+05:30",
 
   venueName: "TMA Pai Convention Centre",
@@ -37,12 +39,12 @@ export const wedding = {
   venueLine2: "Mangalore, Karnataka – 575003",
   venueAddress: "MG Road, Kodailbail, Mangaluru, Karnataka 575003",
   mapsQuery: "TMA Pai Convention Centre MG Road Kodailbail Mangaluru Karnataka 575003",
-  mapsDirectUrl: "https://maps.app.goo.gl/fQHmSSZPkq2doa6o9?g_st=ic",
+  mapsDirectUrl: "https://www.google.com/maps/search/?api=1&query=TMA+Pai+Convention+Centre+MG+Road+Kodailbail+Mangaluru+Karnataka+575003",
   osmEmbed:
     "https://www.openstreetmap.org/export/embed.html?bbox=74.8201%2C12.8626%2C74.8601%2C12.8866&layer=mapnik&marker=12.8746%2C74.8401",
 
-  invitingParents: "Kantha & Nagamani",
-  brideFamily: "Nagamani & family",
+  invitingParents: "Ln Nagamani & Ln Kantha",
+  brideFamily: "Ln Nagamani & family",
   groomFamily: "Hemant & family",
   inviteLine1: "With the divine blessings of Jai Shri Krishna and our elders,",
   inviteLine2:
@@ -52,7 +54,7 @@ export const wedding = {
     "As we begin this beautiful journey together, we seek your love, blessings, and good wishes.",
 } as const;
 
-// One event only — the Wedding Muhurtham for the day.
+// Wedding events for the day: Muhurtham and Reception & Lunch
 export const events: WeddingEvent[] = [
   {
     id: "muhurtham",
@@ -61,10 +63,22 @@ export const events: WeddingEvent[] = [
     telugu: "Sacred Ceremony",
     dateLabel: "Sunday, 15th November 2026",
     timeLabel: "Muhurtham at 11:48 AM",
-    startISO: "2026-11-15T11:48:00+05:30",
+    startISO: "2026-11-15T09:00:00+05:30",
     endISO: "2026-11-15T14:00:00+05:30",
     note: "Guests to gather at the venue by 9:00 AM.",
     icon: "fire",
+  },
+  {
+    id: "reception-lunch",
+    title: "Reception & Lunch",
+    category: "Celebration & Feast",
+    telugu: "Celebration & Feast",
+    dateLabel: "Sunday, 15th November 2026",
+    timeLabel: "1:00 PM onwards",
+    startISO: "2026-11-15T13:00:00+05:30",
+    endISO: "2026-11-15T15:30:00+05:30",
+    note: "Join us for felicitations and a celebratory wedding lunch.",
+    icon: "sparkles",
   },
 ];
 
