@@ -9,10 +9,10 @@ export default function KrishnaIcon({ className = "w-20 h-20", size = 80 }: Kris
       viewBox="0 0 100 100"
       width={size}
       height={size}
-      className={`inline-block drop-shadow-[0_4px_12px_rgba(185,138,47,0.4)] ${className}`}
+      className={`inline-block drop-shadow-[0_4px_14px_rgba(185,138,47,0.45)] ${className}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Lord Krishna Flute with Curved Peacock Feather"
+      aria-label="Lord Krishna Flute with Auspicious Peacock Feather"
     >
       <defs>
         {/* Golden metallic gradient for the flute */}
@@ -24,44 +24,45 @@ export default function KrishnaIcon({ className = "w-20 h-20", size = 80 }: Kris
           <stop offset="100%" stopColor="#78350f" />
         </linearGradient>
 
-        {/* Flute golden glow */}
+        {/* Flute golden tube highlight */}
         <linearGradient id="fluteHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8" />
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.85" />
           <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
         </linearGradient>
 
         {/* Feather outer bronze halo */}
-        <radialGradient id="featherBronze" cx="50%" cy="45%" r="55%">
-          <stop offset="0%" stopColor="#ca8a04" />
-          <stop offset="65%" stopColor="#854d0e" />
+        <radialGradient id="featherBronze" cx="50%" cy="40%" r="55%">
+          <stop offset="0%" stopColor="#eab308" />
+          <stop offset="45%" stopColor="#a16207" />
+          <stop offset="80%" stopColor="#713f12" />
           <stop offset="100%" stopColor="#451a03" />
         </radialGradient>
 
-        {/* Peacock feather outer emerald ring */}
-        <linearGradient id="peacockEmerald" x1="15%" y1="0%" x2="85%" y2="100%">
-          <stop offset="0%" stopColor="#15803d" />
-          <stop offset="40%" stopColor="#047857" />
-          <stop offset="80%" stopColor="#064e3b" />
+        {/* Peacock feather rich emerald layer */}
+        <linearGradient id="peacockEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#10b981" />
+          <stop offset="35%" stopColor="#047857" />
+          <stop offset="75%" stopColor="#065f46" />
           <stop offset="100%" stopColor="#022c22" />
         </linearGradient>
 
-        {/* Peacock feather vibrant turquoise ring with shimmer */}
-        <linearGradient id="peacockTurquoise" x1="10%" y1="0%" x2="90%" y2="100%">
-          <stop offset="0%" stopColor="#5eead4" />
-          <stop offset="35%" stopColor="#0d9488" />
-          <stop offset="70%" stopColor="#0f766e" />
-          <stop offset="100%" stopColor="#134e4a" />
+        {/* Peacock feather vibrant turquoise / teal band */}
+        <linearGradient id="peacockTurquoise" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#67e8f9" />
+          <stop offset="30%" stopColor="#06b6d4" />
+          <stop offset="70%" stopColor="#0d9488" />
+          <stop offset="100%" stopColor="#115e59" />
         </linearGradient>
 
-        {/* Peacock eye deep royal blue/indigo core */}
-        <radialGradient id="peacockIndigo" cx="45%" cy="45%" r="50%">
+        {/* Peacock eye deep royal sapphire / midnight indigo core */}
+        <radialGradient id="peacockIndigo" cx="45%" cy="40%" r="50%">
           <stop offset="0%" stopColor="#38bdf8" />
-          <stop offset="30%" stopColor="#1d4ed8" />
-          <stop offset="65%" stopColor="#1e1b4b" />
+          <stop offset="25%" stopColor="#1d4ed8" />
+          <stop offset="60%" stopColor="#1e1b4b" />
           <stop offset="100%" stopColor="#090524" />
         </radialGradient>
 
-        {/* Tassel silk gradient */}
+        {/* Silk tassel gradient */}
         <linearGradient id="tasselGradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#f59e0b" />
           <stop offset="60%" stopColor="#b45309" />
@@ -69,93 +70,93 @@ export default function KrishnaIcon({ className = "w-20 h-20", size = 80 }: Kris
         </linearGradient>
       </defs>
 
-      {/* ── REALISTIC CURVED PEACOCK FEATHER (MOR PANKH) ── */}
-      <g id="curvedPeacockFeather">
-        {/* Fine curved plumule barbs radiating along the stem */}
-        <g stroke="#15803d" strokeWidth="0.7" opacity="0.8" strokeLinecap="round">
-          {/* Left side sweeping wisps */}
-          <path d="M 44 46 C 36 44 26 46 22 52" />
-          <path d="M 42 40 C 32 38 23 40 18 45" />
-          <path d="M 40 34 C 28 31 20 32 15 37" />
-          <path d="M 38 28 C 25 24 17 24 12 28" />
-          <path d="M 36 22 C 22 17 16 15 12 18" />
-          <path d="M 34 16 C 22 11 18 8 15 10" />
+      {/* ── REALISTIC AUSPICIOUS PEACOCK FEATHER (MOR PANKH) ── */}
+      {/* Elegantly placed with gentle tilt to harmonize with Krishna's flute */}
+      <g id="morPankh" transform="translate(42, 22) rotate(-10)">
+        {/* Delicate sweeping emerald barbs (upward & outward) */}
+        <g stroke="#047857" strokeWidth="0.75" opacity="0.85" strokeLinecap="round">
+          {/* Left side barbs */}
+          <path d="M 0 30 C -8 28, -17 22, -22 12" />
+          <path d="M 0 24 C -9 22, -19 16, -25 4" />
+          <path d="M 0 18 C -11 16, -21 9, -27 -5" />
+          <path d="M 0 12 C -12 9, -23 0, -28 -14" />
+          <path d="M 0 6 C -13 3, -23 -8, -27 -23" />
+          <path d="M 0 0 C -12 -5, -21 -16, -23 -29" />
 
-          {/* Right side sweeping wisps */}
-          <path d="M 46 45 C 56 43 64 47 68 53" />
-          <path d="M 45 39 C 57 37 66 39 72 44" />
-          <path d="M 43 33 C 58 30 68 31 74 35" />
-          <path d="M 41 27 C 58 23 68 23 72 26" />
-          <path d="M 39 21 C 56 16 64 14 66 17" />
-          <path d="M 37 15 C 52 10 57 7 59 9" />
-          <path d="M 34 9 C 44 4 48 2 49 4" />
+          {/* Right side barbs */}
+          <path d="M 0 30 C 8 28, 17 22, 22 12" />
+          <path d="M 0 24 C 9 22, 19 16, 25 4" />
+          <path d="M 0 18 C 11 16, 21 9, 27 -5" />
+          <path d="M 0 12 C 12 9, 23 0, 28 -14" />
+          <path d="M 0 6 C 13 3, 23 -8, 27 -23" />
+          <path d="M 0 0 C 12 -5, 21 -16, 23 -29" />
         </g>
 
-        {/* Golden outer aura wisps around top */}
-        <g stroke="#ca8a04" strokeWidth="0.65" opacity="0.9" strokeLinecap="round">
-          <path d="M 33 18 C 24 12 18 9 16 12" />
-          <path d="M 31 14 C 23 8 19 4 19 7" />
-          <path d="M 29 10 C 23 5 21 2 24 2" />
-          <path d="M 31 6 C 28 2 30 0 34 1" />
-          <path d="M 36 17 C 48 11 55 8 57 11" />
-          <path d="M 38 12 C 48 7 53 3 53 6" />
+        {/* Radiant golden crown wisps & outer aura tips */}
+        <g stroke="#ca8a04" strokeWidth="0.7" opacity="0.9" strokeLinecap="round">
+          <path d="M 0 -8 C -10 -15, -17 -26, -17 -34" />
+          <path d="M 0 -12 C -6 -23, -9 -33, -9 -39" />
+          <path d="M 0 -15 C -2 -25, -3 -35, -2 -41" />
+          <path d="M 0 -18 L 0 -42" />
+          <path d="M 0 -15 C 2 -25, 3 -35, 2 -41" />
+          <path d="M 0 -12 C 6 -23, 9 -33, 9 -39" />
+          <path d="M 0 -8 C 10 -15, 17 -26, 17 -34" />
         </g>
 
-        {/* Curved Central Quill (Rachis) */}
-        <path
-          d="M 47 54 C 44 38 39 22 30 4"
-          stroke="#78350f"
-          strokeWidth="1.9"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 46.7 52 C 43.8 37 38.9 21.5 30.2 4.5"
-          stroke="#fef08a"
-          strokeWidth="0.7"
-          strokeLinecap="round"
-          opacity="0.85"
-        />
-
-        {/* ── PEACOCK EYE (CURVED ASYMMETRICAL OCELLUS) ── */}
+        {/* ── PEACOCK EYE (CONCENTRIC OCELLUS) ── */}
         {/* Layer 1: Bronze/Gold Outer Plume Contour */}
         <path
-          d="M 30 6 C 21 8 18 16 20 23 C 22 29 28 33 37 35 C 46 33 53 28 54 21 C 55 14 49 7 39 5 C 34 4 32 5 30 6 Z"
+          d="M 0 -17 C 9 -17, 16 -8, 16 2 C 16 11, 8 15, 0 15.5 C -8 15, -16 11, -16 2 C -16 -8, -9 -17, 0 -17 Z"
           fill="url(#featherBronze)"
-          opacity="0.92"
+          opacity="0.95"
         />
 
-        {/* Layer 2: Emerald Green curved lobe */}
+        {/* Layer 2: Rich Emerald Green lobe */}
         <path
-          d="M 31 8 C 23 10 21 17 23 22.5 C 24.5 27 30 30.5 37 32 C 44 30.5 50 26.5 51 20.5 C 52 14.5 47 9 39 7.5 C 35 6.8 33 7.3 31 8 Z"
+          d="M 0 -14 C 7.5 -14, 13 -6.5, 13 1.5 C 13 8.5, 6.5 12, 0 12.5 C -6.5 12, -13 8.5, -13 1.5 C -13 -6.5, -7.5 -14, 0 -14 Z"
           fill="url(#peacockEmerald)"
         />
 
-        {/* Layer 3: Vibrant Turquoise Inner Ring with distinct upper cleft/notch */}
+        {/* Layer 3: Vibrant Peacock Turquoise Band with upper cleft notch */}
         <path
-          d="M 33 11 C 28 12.5 25 17 26.5 21 C 28 24.5 32 27 37 28 C 42 27 46 24 47 19.5 C 47.8 15 44 12 39 11 C 37 10.6 35.5 11.5 35 12 C 34.5 11.5 34 10.7 33 11 Z"
+          d="M 0 -6.5 C 2 -9.5, 6.5 -9.5, 9.5 -5 C 11 -1, 9.5 5.5, 6 8.5 C 3 10, 0 10.2, 0 10.2 C 0 10.2, -3 10, -6 8.5 C -9.5 5.5, -11 -1, -9.5 -5 C -6.5 -9.5, -2 -9.5, 0 -6.5 Z"
           fill="url(#peacockTurquoise)"
         />
 
-        {/* Layer 4: Deep Royal Indigo / Sapphire Core Eye (Kidney/Heart curved shape) */}
+        {/* Layer 4: Deep Royal Sapphire / Indigo Core Pupil (Heart/Kidney curve) */}
         <path
-          d="M 34.5 14 C 31 15 29 18 30 20.5 C 31 23 34 24.5 37 25 C 40 24.5 43 22.5 43.5 19.5 C 44 16.5 41.5 14.5 38.5 13.8 C 37.2 13.5 36.2 14.2 35.8 14.6 C 35.4 14.2 34.8 13.9 34.5 14 Z"
+          d="M 0 -3.5 C 1.8 -5.8, 5 -5.8, 6.8 -2.5 C 8 0.5, 6.5 4.5, 4 6.2 C 2 7.2, 0 7.4, 0 7.4 C 0 7.4, -2 7.2, -4 6.2 C -6.5 4.5, -8 0.5, -6.8 -2.5 C -5 -5.8, -1.8 -5.8, 0 -3.5 Z"
           fill="url(#peacockIndigo)"
         />
 
-        {/* Specular Shimmer Arc & Reflection Dot */}
+        {/* Specular Shimmer Arc & Divine Sparkle Highlight */}
         <path
-          d="M 32.5 17 C 33.5 16 35.5 15.5 37 15.8"
-          stroke="#e0f2fe"
+          d="M -4.2 -1.5 C -3 -3.5, -0.6 -4, 0.2 -3.4"
+          stroke="#bae6fd"
           strokeWidth="1.1"
           strokeLinecap="round"
           opacity="0.9"
         />
-        <circle cx="34" cy="18" r="1.3" fill="#ffffff" opacity="0.95" />
-        <circle cx="39.5" cy="17.5" r="0.7" fill="#bae6fd" opacity="0.8" />
+        <circle cx="-1.8" cy="-2.2" r="1.3" fill="#ffffff" opacity="0.95" />
+        <circle cx="2.2" cy="-1.4" r="0.75" fill="#e0f2fe" opacity="0.85" />
+
+        {/* Central Golden Quill (Rachis) passing cleanly through the feather stem */}
+        <path
+          d="M 0 35 L 0 -22"
+          stroke="#78350f"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+        <path
+          d="M 0 33 L 0 -20"
+          stroke="#fef08a"
+          strokeWidth="0.6"
+          strokeLinecap="round"
+          opacity="0.85"
+        />
       </g>
 
       {/* ── BANSURI (SACRED GOLDEN FLUTE) ── */}
-      {/* Tilted flute with enlarged proportions */}
       <g id="bansuriFlute" transform="rotate(-10 50 63)">
         {/* Main Flute Body */}
         <rect
@@ -169,7 +170,7 @@ export default function KrishnaIcon({ className = "w-20 h-20", size = 80 }: Kris
           strokeWidth="0.9"
         />
 
-        {/* Subtle upper light reflection tube */}
+        {/* Flute light reflection tube */}
         <rect
           x="9"
           y="59"

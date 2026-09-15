@@ -46,24 +46,26 @@ function EventCard({ ev, index }: { ev: WeddingEvent; index: number }) {
           </div>
         </div>
 
-        <div className="mt-6 flex gap-3">
-          <a
-            href={googleCalendarUrl(ev)}
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-[#b98a2f]/60 bg-[#fdf8ea]/80 px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#9a6b1f] shadow-sm transition-transform active:scale-95 hover:bg-[#fdf8ea]"
-          >
-            <CalendarPlus className="h-4 w-4" />
-            Google
-          </a>
-          <button
-            onClick={() => downloadIcs(ev)}
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-[#b98a2f]/60 bg-[#fdf8ea]/80 px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#9a6b1f] shadow-sm transition-transform active:scale-95 hover:bg-[#fdf8ea]"
-          >
-            <Download className="h-4 w-4" />
-            Apple / ICS
-          </button>
-        </div>
+        {ev.id !== "reception-lunch" && (
+          <div className="mt-6 flex gap-3">
+            <a
+              href={googleCalendarUrl(ev)}
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-1 items-center justify-center gap-2 rounded-full border border-[#b98a2f]/60 bg-[#fdf8ea]/80 px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#9a6b1f] shadow-sm transition-transform active:scale-95 hover:bg-[#fdf8ea]"
+            >
+              <CalendarPlus className="h-4 w-4" />
+              Google
+            </a>
+            <button
+              onClick={() => downloadIcs(ev)}
+              className="flex flex-1 items-center justify-center gap-2 rounded-full border border-[#b98a2f]/60 bg-[#fdf8ea]/80 px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#9a6b1f] shadow-sm transition-transform active:scale-95 hover:bg-[#fdf8ea]"
+            >
+              <Download className="h-4 w-4" />
+              Apple / ICS
+            </button>
+          </div>
+        )}
       </div>
     </Reveal>
   );

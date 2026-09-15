@@ -61,7 +61,7 @@ export default function Hero() {
           <p className="text-[13px] sm:text-[14px] uppercase tracking-[0.42em] font-medium text-[#9a6b1f]">
             {wedding.occasionEnglish}
           </p>
-          <h1 className="font-script mt-1 text-[20vw] leading-[1.05] text-[#7b1e1e] sm:text-8xl">
+          <h1 className="font-script mt-4 sm:mt-5 text-[20vw] leading-[1.05] text-[#7b1e1e] sm:text-8xl">
             Wedding
           </h1>
         </motion.div>

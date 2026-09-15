@@ -29,9 +29,9 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-clip bg-[#f7efdb] text-[#3d2b1f]">
       <Petals count={14} />
       <Hero />
+      <Invitation />
       <Events />
       <CountdownSection />
-      <Invitation />
       <Venue />
       <Footer />
       <MusicPlayer />

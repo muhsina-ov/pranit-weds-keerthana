@@ -43,9 +43,9 @@ export const wedding = {
   osmEmbed:
     "https://www.openstreetmap.org/export/embed.html?bbox=74.8201%2C12.8626%2C74.8601%2C12.8866&layer=mapnik&marker=12.8746%2C74.8401",
 
-  invitingParents: "Ln Nagamani & Ln Kantha",
-  brideFamily: "Ln Nagamani & family",
-  groomFamily: "Hemant & family",
+  invitingParents: "Ln Kantha & Ln Nagamani",
+  brideFamily: "Ln Kantha & family",
+  groomFamily: "Mr Hemant and family",
   inviteLine1: "With the divine blessings of Jai Shri Krishna and our elders,",
   inviteLine2:
     "joyfully invite you and your family to the wedding muhurtham of our beloved daughter. Your presence is the greatest gift — please join us, bless the couple, and celebrate this beautiful beginning with us.",

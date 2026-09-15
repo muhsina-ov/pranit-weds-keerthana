@@ -1,4 +1,4 @@
-import { MapPin, Navigation } from "lucide-react";
+import { Navigation } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { wedding } from "@/config";
 import { googleMapsUrl } from "@/lib/calendar";
@@ -58,10 +58,6 @@ export default function Venue() {
           </p>
           <p className="mx-auto mt-3 max-w-sm text-[16px] sm:text-[17px] leading-relaxed text-[#5a4632]">
             {wedding.blessingPresenceMessage}
-          </p>
-          <p className="mt-5 flex items-center justify-center gap-1.5 text-[13px] sm:text-[14px] tracking-wider text-[#6b543a]">
-            <MapPin className="h-4 w-4 text-[#8c2323]" />
-            {wedding.venueLine1}, {wedding.venueLine2}
           </p>
         </Reveal>
       </div>
